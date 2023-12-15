@@ -1,0 +1,91 @@
+.appBar {
+  transition: background 0.5s ease-in-out;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+.splide__pagination {
+  counter-reset: pagination-num;
+  bottom: 0em !important;
+}
+
+.splide__pagination__page:before {
+  counter-increment: pagination-num;
+  content: counter(pagination-num);
+}
+.splide__arrow svg {
+  fill: var(--main-color) !important;
+}
+.splide__pagination__page.is-active,
+.splide__pagination__page:hover {
+  background-color: var(--main-color) !important;
+}
+/****  contact-social-icons *******/
+.social-icons a {
+  background-color: var(--light-color);
+  fill: var(--text-secondary);
+  border-radius: 5px;
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.MuiInputBase-root.MuiOutlinedInput-root:hover
+  .MuiOutlinedInput-notchedOutline {
+  border-color: var(--border-color);
+}
+.otp-input {
+  width: 40px !important;
+  height: 40px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+  font-size: large;
+}
+#scrollTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--light-color);
+  color: var(--text-secondary);
+  z-index: 10;
+  width: 60px;
+  height: 60px;
+  display: none;
+  font-size: 2rem;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+  animation: jump 3s ease-in-out infinite alternate-reverse;
+}
+@media (max-width: 1200px) {
+  .social-icons {
+    display: flex;
+    justify-content: center;
+  }
+}
+@keyframes jump {
+  0% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* foreignObject {
+  height: 450px;
+  width: 100%;
+} */
+/* .apexcharts-legend.apexcharts-align-center.apx-legend-position-right,
+foreignObject,
+#apexchartsc7r7x163 {
+  position: static !important;
+} */
+.Toastify__toast-container,
+.MuiBackdrop-root.MuiModal-backdrop {
+  z-index: 999 !important;
+}
+.muiltr-zw3mfo-MuiModal-root-MuiDialog-root {
+  z-index: 999 !important;
+}

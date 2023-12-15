@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* --main-color: #0071bc; */
+  --main-color: #4154f1;
+  --bg-color: #e6f1f9;
+  --light-color: #ffffff;
+  --text-color: #444444;
+  --border-color: #ddd;
+  --text-secondary: #2f2e41;
+  --body-bg: #f6f9ff;
+  --shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
+  --shadow-1: 0px 0px 20px rgba(1, 41, 112, 0.1);
+  --toastify-z-index: 999999;
+}
+body {
+  font-family: "Cairo", sans-serif;
+  background-color: var(--body-bg) !important;
+  --toastify-z-index: 999999;
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+#table::-webkit-scrollbar {
+  height: 12px;
+}
+#table::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+#table::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+}
+select,
+input,
+textarea {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+}
+ul,
+li {
+  list-style: none;
+}
+button {
+  outline: none;
+  border: none;
+  font-family: inherit;
+}
+.st0 {
+  fill: #dd1989;
+}
+.st1 {
+  fill: #58595b;
+}
+.st2 {
+  fill: #ffffff;
+}
+.st3 {
+  fill: #39b54a;
+}
+.st4 {
+  fill: #0ecad3;
+}
+.st5 {
+  fill: #4ed15a;
+}
+.st6 {
+  fill: #0f8084;
+}
+.loader {
+  width: 48px;
+  height: 48px;
+  margin: auto;
+  position: relative;
+}
+.loader:before {
+  content: "";
+  width: 48px;
+  height: 5px;
+  background: #000;
+  opacity: 0.25;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  border-radius: 50%;
+  animation: shadow 0.5s linear infinite;
+}
+.loader:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  animation: bxSpin 0.5s linear infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 4px;
+}
+@keyframes bxSpin {
+  17% {
+    border-bottom-right-radius: 3px;
+  }
+  25% {
+    transform: translateY(9px) rotate(22.5deg);
+  }
+  50% {
+    transform: translateY(18px) scale(1, 0.9) rotate(45deg);
+    border-bottom-right-radius: 40px;
+  }
+  75% {
+    transform: translateY(9px) rotate(67.5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(90deg);
+  }
+}
+
+@keyframes shadow {
+  0%,
+  100% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.2, 1);
+  }
+}
